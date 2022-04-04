@@ -9,7 +9,7 @@
         "AzureDevOpsOrganization": "<azureDevOps.organization>",
         "AzureDevOpsOrganizationURI": "https://dev.azure.com/<azureDevOps.organization>",
         "AzureDevOpsProject": "<project.name>",
-        "TemplateGitUrl": "https://github.com/microsoft/devsquad-in-a-day.git",
+        "TemplateGitUrl": "https://github.com/Ricardomartinez-dev/devsquad",
         "MinimumApprovers": "1",
         "Pipelines": [
             {

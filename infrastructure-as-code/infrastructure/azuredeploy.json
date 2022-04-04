@@ -167,7 +167,7 @@
     "dataLakeName": "[naming.clean('lake',variables('uniqueStr'), parameters('environment'), parameters('solutionName'))]",
     "databricksName": "[naming.default('dbw',variables('uniqueStr'), parameters('environment'), parameters('solutionName'))]",
     "dataFactoryName": "[naming.default('adf',variables('uniqueStr'), parameters('environment'), parameters('solutionName'))]",
-    "keyVaultName": "[naming.default('kv',variables('uniqueStr'), parameters('environment'), parameters('solutionName'))]"
+    "keyVaultName": "[naming.default('kvt',variables('uniqueStr'), parameters('environment'), parameters('solutionName'))]"
   },
   "resources": [
     {
