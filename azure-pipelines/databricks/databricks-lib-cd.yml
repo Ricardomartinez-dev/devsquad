@@ -1,0 +1,21 @@
+trigger: none
+
+resources:
+  pipelines:
+  - pipeline: lib
+    source: ehu-lib-cd
+    trigger: 
+      branches:
+      - develop
+      - qa
+      - main
+
+variables:
+- template: ../variable.environment.yml
+
+stages:
+- template: templates/databricks-deploy-library-job-template.yml
+  parameters:
+    branch: ${{variables.branch}}
+    environment: ${{variables.environment}}
+    azureServiceConnection: ${{variables.azureServiceConnection}}

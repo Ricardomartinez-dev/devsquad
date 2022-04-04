@@ -1,0 +1,13 @@
+{
+	"name": "AzureDatabricksLinkedService",
+	"properties": {
+		"annotations": [],
+		"type": "AzureDatabricks",
+		"typeProperties": {
+			"domain": "",
+			"authentication": "MSI",
+			"workspaceResourceId": "",
+			"existingClusterId": "mycluster"
+		}
+	}
+}

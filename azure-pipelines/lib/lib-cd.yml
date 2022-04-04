@@ -1,0 +1,37 @@
+trigger:
+  batch: true
+  branches:
+    include:
+    - develop
+    - qa
+    - main
+  paths:
+    include:
+    - data-platform/src/dataopslib/dataopslib
+
+variables:
+  - template: ../variable.environment.yml
+
+stages:
+- template: templates/lib-stage-environment.yml
+  parameters:
+    branch: 'refs/heads/develop'
+    environment: dev
+    prereleaseAlias: beta
+    variableGroupName: ${{variables.variableGroupName}}
+    artifactFeed: ${{variables.artifactFeed}}
+
+- template: templates/lib-stage-environment.yml
+  parameters:
+    branch: 'refs/heads/qa'
+    environment: qa
+    prereleaseAlias: preview
+    variableGroupName: ${{variables.variableGroupName}}
+    artifactFeed: ${{variables.artifactFeed}}   
+
+- template: templates/lib-stage-environment.yml
+  parameters:
+    branch: 'refs/heads/main'
+    environment: prod
+    variableGroupName: ${{variables.variableGroupName}}
+    artifactFeed: ${{variables.artifactFeed}}

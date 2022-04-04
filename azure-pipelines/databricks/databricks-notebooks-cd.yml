@@ -1,0 +1,20 @@
+trigger:
+  branches:
+    include:
+      - qa
+      - main
+      - develop
+
+  paths:
+    include:
+      - data-platform/notebooks/*
+
+variables:
+- template: ../variable.environment.yml
+
+stages:
+- template: templates/databricks-deploy-notebooks-job-template.yml
+  parameters:
+    environment: ${{variables.environment}}
+    azureServiceConnection: ${{variables.azureServiceConnection}}
+    iacCdVariableGroupPrefix: ${{variables.iacCdVariableGroupPrefix}}

@@ -1,0 +1,54 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "environment":{
+            "value": "dev"
+        },
+        "solutionName":{
+            "value": "ehu"
+        }, 
+        "location": {
+            "value": "eastus"
+        },
+        "servicePrincipal": {
+            "value": "SP-enfermedades-huerfanas-DevTest"
+        },
+        "servicePrincipalSecret": {
+            "value": "-Nt7Q~eV2iv401ZA7jjeBYVrLiXHTO5KtPp-G"
+        },
+        "resourceGroupData":{
+            "value": "rg-ehu-data-dev"
+        },
+        "resourceGroupCompute":{
+            "value": "rg-ehu-compute-dev"
+        },
+        "resourceGroupMachineLearning":{
+            "value": "rg-ehu-ml-dev"
+        },
+        "resourceGroupManagedDatabricks":{
+            "value": "rg-ehu-compute-dbw-dev"
+        },
+        "dataLakeSkuName":{
+            "value": "Standard_LRS"
+        },
+        "keyVaultSecretsAdminObjectId": {
+            "value": "c06d0482-8384-4205-a17f-edd2222dce1b"
+        },
+        "dataFactoryAccountName": {
+            "value": "ricardomartinez0138"
+        },
+        "dataFactoryProjectName": {
+            "value": "enfermedades-huerfanas"
+        },
+        "dataFactoryRepositoryName": {
+            "value": "enfermedades-huerfanas"
+        },
+        "dataFactoryCollaborationBranch": {
+            "value": "develop"
+        },
+        "dataFactoryRootFolder": {
+            "value": "data-platform/adf"
+        }
+    }
+}

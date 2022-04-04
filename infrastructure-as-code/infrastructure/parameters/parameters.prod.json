@@ -1,0 +1,39 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "environment":{
+            "value": "prod"
+        },
+        "solutionName":{
+            "value": "ehu"
+        },    
+        "location": {
+            "value": "eastus"
+        },
+        "servicePrincipal": {
+            "value": "SP-enfermedades-huerfanas-DevTest"
+        },
+        "servicePrincipalSecret": {
+            "value": "-Nt7Q~eV2iv401ZA7jjeBYVrLiXHTO5KtPp-G"
+        },
+        "resourceGroupData":{
+            "value": "rg-ehu-data-prod"
+        },
+        "resourceGroupCompute":{
+            "value": "rg-ehu-compute-prod"
+        },
+        "resourceGroupMachineLearning":{
+            "value": "rg-ehu-ml-prod"
+        },
+        "resourceGroupManagedDatabricks":{
+            "value": "rg-ehu-compute-dbw-prod"
+        },
+        "dataLakeSkuName":{
+            "value": "Standard_GRS"
+        },
+        "keyVaultSecretsAdminObjectId": {
+            "value": "ff1b0094-0e92-4e5b-9f21-502837003e85"
+        }
+    }
+}

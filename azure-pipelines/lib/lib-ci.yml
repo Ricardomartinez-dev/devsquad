@@ -1,0 +1,15 @@
+trigger: none
+
+pool:
+  vmImage: "ubuntu-latest"
+
+variables:
+  - template: ../variable.environment.yml
+  
+jobs:
+- template: templates/lib-build-publish.yml
+  parameters:
+    artifactFeed: ${{variables.artifactFeed}}
+    variableGroupName: ${{variables.variableGroupName}}
+    prereleaseAlias: alpha
+    sourceBranchName: $(System.PullRequest.SourceBranch)
